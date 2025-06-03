@@ -109,6 +109,59 @@ deepseek_models = [
     "DeepSeek-VL2"
 ]
 
+alibaba_models = [
+    "QwQ-32B-Preview",
+    "Qwen-Max",
+    "Qwen-Plus",
+    "Qwen-Turbo",
+    "Qwen-3",
+    "Qwen-2.5-Dense",
+    "Qwen-2.5-Sparse",
+    "Qwen-2.5-VL-3B",
+    "Qwen-2.5-VL-7B",
+    "Qwen-2.5-VL-32B",
+    "Qwen-2.5-VL-72B",
+    "Qwen-2.5-VL-32B-Instruct",
+    "Qwen-2.5-Omni-7B",
+    "Qwen-2-Dense",
+    "Qwen-2-Sparse",
+    "Qwen-2-VL-2B",
+    "Qwen-2-VL-7B",
+    "Qwen-1.5",
+    "Qwen2-VL-2B",
+    "Qwen2-VL-7B",
+    "Qwen2-Math"
+]
+
+mistral_models = [
+    "Mistral Large",
+    "Mistral Medium",
+    "Mistral Small",
+    "Mistral Small v3.1",
+    "Mistral 7B",
+    "Mixtral 8x7B",
+    "Mixtral 8x22B",
+    "Codestral",
+    "Codestral Mamba",
+    "Mistral Moderation",
+    "Mistral Saba",
+    "Pixtral",
+    "Pixtral Large",
+    "NeMo",
+    "Mathstral 7B",
+    "Devstral Small",
+    "Mistral OCR"
+]
+
+xai_models = [
+    "grok-2",
+    "grok-2-latest",
+    "grok-2.5",
+    "grok-3-fast",
+    "grok-3-standard"
+]
+
+
 def get_models(provider):
     if provider == "OpenAI":
         return openai_models
@@ -120,6 +173,12 @@ def get_models(provider):
         return meta_models
     elif provider == "DeepSeek":
         return deepseek_models
+    elif provider == "Alibaba":
+        return alibaba_models
+    elif provider == "Mistral":
+        return mistral_models
+    elif provider == "xAI":
+        return xai_models
     elif provider == "Other":
         return []
     return []
