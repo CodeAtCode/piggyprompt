@@ -161,6 +161,30 @@ xai_models = [
     "grok-3-standard"
 ]
 
+ibm_models = [
+    "Granite 3.1",
+    "Granite 3.2",
+    "Granite 3.3",
+    "Granite 4.0"
+]
+
+microsoft_models = [
+    "Phi-3",
+    "Phi-3.5-mini-instruct",
+    "Phi-3.5-MoE-instruct",
+    "Phi-3.5-vision-instruct",
+    "Phi-4-reasoning",
+    "Phi-4-reasoning-plus",
+    "Phi-4-mini-reasoning",
+    "azure-o1-preview",
+    "azure-o1",
+    "azure-o1-mini",
+    "azure-o3-mini",
+    "azure-o3",
+    "azure-o4-mini"
+]
+
+
 
 def get_models(provider):
     if provider == "OpenAI":
@@ -179,6 +203,10 @@ def get_models(provider):
         return mistral_models
     elif provider == "xAI":
         return xai_models
+    elif provider == "IBM":
+        return ibm_models
+    elif provider == "Microsoft":
+        return microsoft_models
     elif provider == "Other":
         return []
     return []
